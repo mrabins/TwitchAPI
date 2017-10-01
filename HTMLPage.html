@@ -1,67 +1,52 @@
 <!DOCTYPE html>
-<html lang="">
-<head>
-
-  <link rel="icon" href="twitch-icon.ico" type="image/icon">
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
-    <div id="twitchLogo">
-        <img src="twitch-logo.png" width="200" height="100" id="twitchLogo" style="float: left;" onclick="window.location.href = 'http://localhost:8000/HTMLPage.html'">
-      </div>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Twitch API">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="#">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="StyleSheet.css">
-
-</head>
-<body>
-
-    <div class="container" role="main">
-
-        <div class="row">
-            <div class="col-md-12">
-
-                <div class="btn-group padding-25" role="group">
-
+<html>
+  <head>
+    <title>Twitch API Search Streams</title>
+        <link rel="stylesheet" type="text/css" href="css/StyleSheet.css" />
+        <div id="twitchLogo">
+     <img src="twitch-logo.png" width="200" height="100" id="twitchLogo" style="float: right;" onclick="window.location.href = 'http://localhost:8000/HTMLPage.html'">
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+   </div>
+  </head>
+  <body>
+        <div class="container">
+                <form class="search">
+                        <input type="text" name="query" />
+                        <button type="submit">Search</button>
+                </form>
+                <div id="results" class="no-data">
+                        <div class="controls">
+                                <div class="totals">Total results: <span data-text="totalStreams"></span></div>
+                                <div class="pagers">
+                                        <button type="button" class="pager prev" data-enable="prevPage"><span class="arrow arrow-left"></span></button>
+                                        <span data-text="page"></span> / <span data-text="pageCount"></span>
+                                        <button type="button" class="pager next" data-enable="nextPage"><span class="arrow arrow-right"></span></button>
+                                </div>
+                        </div>
+                        <div data-repeat="streams" data-template="streamTemplate" class="streams"></div>
                 </div>
-
-                <div class="list-group">
-
-                </div>
-
-            </div>
-
-        </div>
-        <div class="row padding-25">
-
-            <div class="col-md-12">
-        <input type="text" id="textQuery" placeholder="Search here"
-               onkeydown="if (event.keyCode == 13) document.getElementById('searchQuery').click()">
-        <button id="searchQuery">
-            Search
-        </button>
-        <div id="streamDisplayList">
-        <span id="total">
-            Total Results:
-            <span id="streamCount">0 </span>
-        </span>
-
-        <span id="pageSwitch">
-            <button class="arrow" id="prevPage" disabled>&laquo;</button>
-            <span id="currentPage">1</span>/<span id="pageLimit">1</span>
-            <button class="arrow" id="nextPage" disabled>&raquo;</button><br>
-        </span>
-                    </span>
-                </div>
-
-            </div>
-
         </div>
 
-    </div>
-</body>
+        <!-- Production improvement: Minify and Bundle all of these JS files into a single include -->
+    <script type="text/javascript" src="js/event.js"></script>
+    <script type="text/javascript" src="js/template.js"></script>
+        <script type="text/javascript" src="js/model.js"></script>
+        <script type="text/javascript" src="js/view.js"></script>
+        <script type="text/javascript" src="js/controller.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/html" id="streamTemplate">
+                <a href="{{url}}" class="stream" target="_blank">
+                <h1><img src="{{preview}}" alt="{{displayName}}" class="preview" />{{displayName}}</h1>
+                <p>{{game}} - {{viewers}} viewers</p>
+                <p>{{description}}</p>
+                </a>
+        </script>
+  </body>
 </html>
