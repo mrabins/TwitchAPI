@@ -1,33 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 <head>
-    <link rel="icon" href="twitch-icon.ico" type="image/icon">
-    <title>
-      Twitch Search
-    </title>
+
+  <link rel="icon" href="twitch-icon.ico" type="image/icon">
     <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+    <div id="twitchLogo">
+        <img src="twitch-logo.png" width="200" height="100" id="twitchLogo" style="float: left;" onclick="window.location.href = 'http://localhost:8000/HTMLPage.html'">
+      </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Twitch API">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="StyleSheet.css">
+
 </head>
 <body>
 
-    <div id="searchHeader">
-        <div class="topcorner">
-            <a href="https://www.twitch.tv">
-                Twitch.tv
-            </a>
-        </div>
+    <div class="container" role="main">
 
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="btn-group padding-25" role="group">
+
+                </div>
+
+                <div class="list-group">
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row padding-25">
+
+            <div class="col-md-12">
         <input type="text" id="textQuery" placeholder="Search here"
                onkeydown="if (event.keyCode == 13) document.getElementById('searchQuery').click()">
         <button id="searchQuery">
             Search
         </button>
-
-        <button id="browseTwitch" onClick="window.location = 'http://www.twitch.tv/directory';">
-            Browse The Directory
-        </button>
-
-    </div>
-    <div id="streamDisplayList">
+        <div id="streamDisplayList">
         <span id="total">
             Total Results:
             <span id="streamCount">0 </span>
@@ -38,11 +55,13 @@
             <span id="currentPage">1</span>/<span id="pageLimit">1</span>
             <button class="arrow" id="nextPage" disabled>&raquo;</button><br>
         </span>
+                    </span>
+                </div>
 
-        <table id="listBody"></table>
+            </div>
+
+        </div>
+
     </div>
-    <footer>
-    </footer>
-    <script></script>
 </body>
 </html>
