@@ -13,3 +13,221 @@ a {
 .padding-25 {
 	padding: 25px;
 }
+
+
+
+
+
+
+
+
+.no-data {
+        display: none;
+}
+.container {
+        margin: 10px auto 10px auto;
+        width: 90%;
+        border: 1px solid black;
+}
+.search {
+        padding: 15px;
+}
+#results {
+        padding: 15px;
+        border-top: 1px solid black;
+}
+.stream {
+        margin-bottom: 10px;
+        display: block;
+        text-decoration: none;
+        color: #000;
+        padding: 10px;
+}
+.stream:hover {
+        background-color: #eee;
+}
+.stream .preview {
+        float: left;
+        margin-right: 10px;
+        width: 25%;
+        height: auto;
+}
+.stream h1 {
+        margin: 0;
+        font-size: 28px;
+}
+.stream p {
+        margin-bottom: 0;
+        margin-top: 5px;
+}
+.controls:after, .stream:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+}
+.controls {
+        margin-bottom: 10px;
+}
+.totals {
+        float: left;
+}
+.pagers {
+        float: right;
+}
+.pager {
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+        padding: 5px 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+}
+.pager:hover {
+        background-color: #eee;
+}
+.pager[disabled]:hover {
+        background-color: transparent;
+}
+.pager[disabled] {
+        cursor: not-allowed;
+        color: #ddd;
+}
+.arrow {
+        display: block;
+        height: 0;
+        width: 0;
+}
+.arrow-left {
+        border-top: 0.5em solid transparent;
+        border-bottom: 0.5em solid transparent;
+        border-right: 0.5em solid;
+}
+.arrow-right {
+        border-top: 0.5em solid transparent;
+        border-bottom: 0.5em solid transparent;
+        border-left: 0.5em solid;
+}
+
+/* Responsive sizing to make the container box take up more of the screen on smaller screens */
+@media (min-width: 768px) {
+        .container {
+                width: 78%
+        }
+}
+@media (min-width: 900px) {
+        .container {
+                width: 65%;
+        }
+}
+
+
+
+
+
+
+.no-data {
+	display: none;
+}
+.container {
+	margin: 10px auto 10px auto;
+	width: 90%;
+	border: 1px solid black;
+}
+.search {
+	padding: 15px;
+}
+#results {
+	padding: 15px;
+	border-top: 1px solid black;
+}
+.stream {
+	margin-bottom: 10px;
+	display: block;
+	text-decoration: none;
+	color: #000;
+	padding: 10px;
+}
+.stream:hover {
+	background-color: #eee;
+}
+.stream .preview {
+	float: left;
+	margin-right: 10px;
+	width: 25%;
+	height: auto;
+}
+.stream h1 {
+	margin: 0;
+	font-size: 28px;
+}
+.stream p {
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+.controls:after, .stream:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.controls {
+	margin-bottom: 10px;
+}
+.totals {
+	float: left;
+}
+.pagers {
+	float: right;
+}
+.pager {
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+	outline: none;
+	padding: 5px 10px;
+	vertical-align: middle;
+	margin-top: -2px;
+}
+.pager:hover {
+	background-color: #eee;
+}
+.pager[disabled]:hover {
+	background-color: transparent;
+}
+.pager[disabled] {
+	cursor: not-allowed;
+	color: #ddd;
+}
+.arrow {
+	display: block;
+	height: 0;
+	width: 0;
+}
+.arrow-left {
+	border-top: 0.5em solid transparent;
+	border-bottom: 0.5em solid transparent;
+	border-right: 0.5em solid;
+}
+.arrow-right {
+	border-top: 0.5em solid transparent;
+	border-bottom: 0.5em solid transparent;
+	border-left: 0.5em solid;
+}
+
+/* Responsive sizing to make the container box take up more of the screen on smaller screens */
+@media (min-width: 768px) {
+	.container {
+		width: 78%
+	}
+}
+@media (min-width: 900px) {
+	.container {
+		width: 65%;
+	}
+}
