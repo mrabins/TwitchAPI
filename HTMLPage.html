@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="twitch-icon.ico" type="image/icon">
+    <title>
+      Twitch Search
+    </title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <div id="searchHeader">
+        <div class="topcorner">
+            <a href="https://www.twitch.tv">
+                Twitch.tv
+            </a>
+        </div>
+
+        <input type="text" id="textQuery" placeholder="Search here"
+               onkeydown="if (event.keyCode == 13) document.getElementById('searchQuery').click()">
+        <button id="searchQuery">
+            Search
+        </button>
+
+        <button id="browseTwitch" onClick="window.location = 'http://www.twitch.tv/directory';">
+            Browse The Directory
+        </button>
+
+    </div>
+    <div id="streamDisplayList">
+        <span id="total">
+            Total Results:
+            <span id="streamCount">0 </span>
+        </span>
+
+        <span id="pageSwitch">
+            <button class="arrow" id="prevPage" disabled>&laquo;</button>
+            <span id="currentPage">1</span>/<span id="pageLimit">1</span>
+            <button class="arrow" id="nextPage" disabled>&raquo;</button><br>
+        </span>
+
+        <table id="listBody"></table>
+    </div>
+    <footer>
+    </footer>
+    <script></script>
+</body>
+</html>
